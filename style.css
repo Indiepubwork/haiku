@@ -1,0 +1,240 @@
+/* 
+ * Hoshitori Haiku Stylesheet
+ * Version 2.1.0 - 2025-06-27
+ * Clean design for: header, h1, h2, p, blockquote, footer
+ */
+
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: #1a1a1a;
+  background: #ffffff;
+  min-height: 100vh;
+  max-width: 48rem;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Header Section */
+header {
+  text-align: center;
+  padding: 3rem 0;
+  background: linear-gradient(135deg, #0f0f23 0%, #1a1a3a 50%, #2d2d5f 100%);
+  margin: -2rem -2rem 4rem -2rem;
+  position: relative;
+  color: white;
+  box-shadow: 0 8px 32px rgba(15, 15, 35, 0.3);
+}
+
+/* Header Subline */
+header p {
+  color: #c5c5c5;
+  font-size: 1.3rem;
+  text-align: center;
+  margin-bottom: 0;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  opacity: 0.9;
+}
+
+header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="20" cy="20" r="0.5" fill="rgba(255,255,255,0.1)"/><circle cx="80" cy="40" r="0.3" fill="rgba(255,255,255,0.05)"/><circle cx="40" cy="80" r="0.4" fill="rgba(255,255,255,0.08)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+header::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: linear-gradient(90deg, #ff6b35, #4ecdc4, #45b7d1, #f39c12);
+}
+
+/* Typography */
+h1 {
+  font-size: 3.3rem;
+  font-weight: 800;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 1rem;
+  letter-spacing: -0.05em;
+  line-height: 1.1;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 1;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0f0f23;
+  text-align: center;
+  margin: 4rem 0 2rem 0;
+  position: relative;
+}
+
+h2::after {
+  content: '';
+  width: 60px;
+  height: 3px;
+  background: #e0e0e0;
+  display: block;
+  margin: 1rem auto 0;
+}
+
+p {
+  margin-bottom: 2rem;
+  color: #4a4a4a;
+  font-size: 1.25rem;
+  line-height: 1.7;
+  text-align: left;
+  font-weight: 400;
+}
+
+/* Haiku Blockquotes */
+blockquote {
+  background: linear-gradient(135deg, #f0f8ff 0%, #e6f3ff 100%);
+  border: none;
+  border-radius: 8px;
+  padding: 3rem 2rem;
+  margin: 3rem 0;
+  position: relative;
+  font-style: normal;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transform: translateY(0);
+}
+
+blockquote:nth-of-type(2n) {
+  background: linear-gradient(135deg, #f8fffe 0%, #f0faf9 100%);
+}
+
+blockquote:nth-of-type(3n) {
+  background: linear-gradient(135deg, #f7fbff 0%, #eff7ff 100%);
+}
+
+blockquote p {
+  font-family: 'Georgia', serif;
+  font-size: 1.8rem;
+  line-height: 1.4;
+  color: #1a1a1a;
+  margin: 0;
+  font-weight: 400;
+  white-space: pre-line;
+  text-align: center;
+  font-style: italic;
+}
+
+blockquote:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  transition: all 0.3s ease;
+}
+
+/* Footer */
+footer {
+  margin-top: 5rem;
+  padding: 3rem 0;
+  text-align: center;
+}
+
+footer p {
+  color: #666666;
+  font-size: 1.125rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  body {
+    padding: 1.5rem;
+    border-left-width: 4px;
+  }
+  
+  header {
+    padding: 2rem 0;
+    margin: -1.5rem -1.5rem 3rem -1.5rem;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+  
+  p {
+    font-size: 1.125rem;
+  }
+  
+  blockquote {
+    padding: 2rem 1.5rem;
+    border-left-width: 4px;
+  }
+  
+  blockquote p {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 1rem;
+  }
+  
+  header {
+    padding: 1.5rem 0;
+    margin: -1rem -1rem 2rem -1rem;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.25rem;
+  }
+  
+  p {
+    font-size: 1rem;
+  }
+  
+  blockquote {
+    padding: 1.5rem 1rem;
+  }
+  
+  blockquote p {
+    font-size: 1.25rem;
+  }
+  
+  footer p {
+    font-size: 1rem;
+  }
+}
+
+/* Print Styles */
+@media print {
+  body {
+    border: none;
+    padding: 1rem;
+    max-width: none;
+  }
+}
